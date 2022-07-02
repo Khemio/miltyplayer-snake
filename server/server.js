@@ -6,11 +6,7 @@ import { makeid } from "./utils.js";
 const state = {};
 const clientRooms = {};
 
-const io = new Server({
-    cors: {
-        origin: ['http://localhost:3000', 'http://localhost:3001']
-    }
-});
+const io = new Server();
 
 io.on('connection', client => {
     client.on('keydown', handleKeydown);

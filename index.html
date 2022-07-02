@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <section class="min-h-screen">
+      <div class="container h-screen">
+
+        <div id="initialScreen" class="flex items-center justify-center h-full">
+          <div class="flex flex-col gap-5 justify-center items-center">
+            <h1 class="mb-10 text-3xl">Multiplayer Snake</h1>
+            <button type="button" class="rounded py-3 px-4 bg-green-400 text-lg" id="newGameBtn">Create New Game</button>
+
+            <div class="text-center text-lg">OR</div>
+
+              <input type="text" placeholder="Enter Game Code" id="gameCodeInput" class="py-2 text-center border border-2 rounded-md border-green-400 focus:outline-green-600">
+
+            <button type="button" class="rounded py-3 px-4 w-fit bg-green-400 text-lg" id="joinGameBtn">Join Game</button>
+          </div>
+        </div>
+
+        <div id="gameScreen" class="flex flex-col gap-3 items-center justify-center h-full bg-green-400 hidden">
+          <h1>Your game code is: <span id="gameCodeDisplay"></span></h1>
+          <!-- <div class="flex flex-col items-center justify-center m-auto bg-green-600"> -->
+            <canvas id="canvas"></canvas>
+          <!-- </div> -->
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

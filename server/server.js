@@ -1,3 +1,4 @@
+import { createServer } from "http";
 import {Server}from "socket.io";
 import { initGame, gameLoop, getUpdatedVelocity } from "./game.js";
 import { FRAME_RATE } from "./constants.js";
@@ -6,10 +7,10 @@ import { makeid } from "./utils.js";
 const state = {};
 const clientRooms = {};
 
-const io = new Server({
+const httpServer = createServer()
+const io = new Server( httpServer, {
     cors: {
-        origin: ['*'],
-        allowedHeaders: ['Access-Control-Allow-Origin'],
+        origin: '*'
     }
 });
 

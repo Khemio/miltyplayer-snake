@@ -8,7 +8,7 @@ const clientRooms = {};
 
 const io = new Server({
     cors: {
-        origin: ['https://exquisite-profiterole-41f931.netlify.app/']
+        origin: ['https://exquisite-profiterole-41f931.netlify.app/', 'http://localhost:3000', 'https://snakey-friends.herokuapp.com/']
     }
 });
 

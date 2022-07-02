@@ -6,7 +6,11 @@ import { makeid } from "./utils.js";
 const state = {};
 const clientRooms = {};
 
-const io = new Server();
+const io = new Server({
+    cors: {
+        origin: ['https://exquisite-profiterole-41f931.netlify.app/']
+    }
+});
 
 io.on('connection', client => {
     client.on('keydown', handleKeydown);

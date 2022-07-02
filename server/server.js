@@ -8,7 +8,8 @@ const clientRooms = {};
 
 const io = new Server({
     cors: {
-        origin: ['*']
+        origin: ['*'],
+        allowedHeaders: ['Access-Control-Allow-Origin'],
     }
 });
 
